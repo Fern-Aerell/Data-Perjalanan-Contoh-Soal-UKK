@@ -6,7 +6,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(135deg, #6F4F28, #D5A45D); /* Soft Brown Gradient */
+    background: linear-gradient(135deg, #6F4F28, #D5A45D);
 }
 
 .container {
