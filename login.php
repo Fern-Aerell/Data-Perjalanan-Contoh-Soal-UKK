@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +17,11 @@
     <div class="container">
         <h2>Login</h2>
         <form>
+            <?php
+                if (isset($_SESSION['success_message'])) {
+                    echo '<p class="success_message">' . $_SESSION['success_message'] . '</p>';
+                }
+            ?>
             <input type="text" name="nik" placeholder="NIK" required>
             <input type="text" name="nama-lengkap" placeholder="Nama Lengkap" required>
             <div class="button-container">
@@ -27,3 +36,7 @@
 </body>
 
 </html>
+
+<?php
+session_destroy();
+?>

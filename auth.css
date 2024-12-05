@@ -115,3 +115,11 @@ button:hover {
         font-size: 12px;
     }
 }
+
+.success_message {
+    color: green;
+}
+
+.fail_message {
+    color: red;
+}

@@ -1,3 +1,7 @@
+<?php 
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +15,12 @@
 <body>
     <div class="container">
         <h2>Register</h2>
-        <form>
+        <form action="tambah_akun.php" method="post">
+            <?php 
+                if(isset($_SESSION['fail_message'])) {
+                    echo '<p class="fail_message">'.$_SESSION['fail_message'].'</p>';
+                }
+            ?>
             <input type="text" name="nik" placeholder="NIK" required>
             <input type="text" name="nama_lengkap" placeholder="Nama Lengkap" required>
             <div class="button-container">
@@ -26,3 +35,7 @@
 </body>
 
 </html>
+
+<?php 
+session_destroy();
+?>
