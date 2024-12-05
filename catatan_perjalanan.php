@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="foto_founder.jpg" type="image/x-icon">
     <title>Catatan Perjalanan</title>
     <link rel="stylesheet" href="catatan_perjalanan.css">
     <link rel="stylesheet" href="anim.css">

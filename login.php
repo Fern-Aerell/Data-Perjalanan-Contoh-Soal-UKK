@@ -8,6 +8,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="foto_founder.jpg" type="image/x-icon">
     <title>Login</title>
     <link rel="stylesheet" href="auth.css">
 </head>
@@ -22,7 +23,7 @@ session_start();
                     echo '<p class="success_message">' . $_SESSION['success_message'] . '</p>';
                 }
             ?>
-            <input type="text" name="nik" placeholder="NIK" required>
+            <input type="number" name="nik" placeholder="NIK" required>
             <input type="text" name="nama-lengkap" placeholder="Nama Lengkap" required>
             <div class="button-container">
                 <button onclick="redirect('register.php')" type="button">Saya Pengguna Baru</button>

@@ -13,6 +13,8 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nik']) && isset($_POST
     if(file_exists($user_file_path)) {
         session_start();
         $_SESSION['fail_message'] = "Nik sudah digunakan.";
+        $_SESSION['nik'] = $nik;
+        $_SESSION['nama_lengkap'] = $nama_lengkap;
         header('Location:register.php');
         die;
     }
@@ -23,7 +25,9 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nik']) && isset($_POST
         header('Location:login.php');
         die;
     }else{
-        $_SESSION['fail_message'] = "Nik sudah digunakan.";
+        $_SESSION['fail_message'] = "Gagal membuat user.";
+        $_SESSION['nik'] = $nik;
+        $_SESSION['nama_lengkap'] = $nama_lengkap;
         header('Location:register.php');
         die;
     }
@@ -31,5 +35,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nik']) && isset($_POST
 
 session_start();
 $_SESSION['fail_message'] = "Terjadi kesalahan saat membuat user.";
+$_SESSION['nik'] = $nik;
+$_SESSION['nama_lengkap'] = $nama_lengkap;
 header('Location:register.php');
 die;
